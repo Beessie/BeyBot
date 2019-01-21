@@ -1,6 +1,7 @@
 //-------------require-------------//
 const express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const line = require('@line/bot-sdk');
 //--------------------------------//
 
 //-------------Intitial-------------//
