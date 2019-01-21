@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 app.post('/webhook', (req, res) => {
     console.log('==> POST /webhook');
     let body = req.body;
-    let events = body.events;
-    let source = enents.source;
+    let events = body.events[0];
+    let source = events.source;
     let message = events.message;
     console.log('==> Body');
     console.log(body);
