@@ -21,6 +21,9 @@ app.post('/webhook', (req, res) => {
         status: 'OK',
         body: req.body
     }); //on web
+    let events = body.events[0];
+    let source = enents.source;
+    let message = source.events;
     console.log('==> Body');
     console.log(req.body);
 });
