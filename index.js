@@ -83,10 +83,13 @@ app.post('/webhook', (req, res) => {
                 replyMessage(replyToken, messageRespone);
 
             }else if(type == 'sticker'){
-                let stickerId = message.stickerId;
-                let packageId = message.packageId;
-
-                replyMessage(replyToken, message);
+                // let stickerId = message.stickerId;
+                // let packageId = message.packageId;
+                const messageResSticker = {
+                    packageId: '13',
+                    stickerId: '1'
+                }
+                replyMessage(replyToken, messageResSticker);
             }
             break;
 
