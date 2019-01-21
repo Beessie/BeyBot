@@ -88,7 +88,7 @@ app.post('/webhook', (req, res) => {
                 const messageResSticker = {
                     type: 'sticker',
                     // id: '9220001907250',
-                    packageId: '15',
+                    packageId: '2',
                     stickerId: '1'
                 }
                 replyMessage(replyToken, messageResSticker);
