@@ -68,7 +68,7 @@ app.post('/webhook', (req, res) => {
                 let text = message.text;
                     console.log(`[text] ==>`);
 
-                const message = [ 
+                const messageRespone = [ 
                     {
                         type: 'text',
                         text: 'HELLO'
@@ -80,7 +80,7 @@ app.post('/webhook', (req, res) => {
                         stickerId: '1'
                     }
                 ];
-                replyMessage(replyToken, message);
+                replyMessage(replyToken, messageRespone);
 
             }else if(type == 'sticker'){
                 let stickerId = message.stickerId;
