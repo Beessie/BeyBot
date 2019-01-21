@@ -17,10 +17,6 @@ app.get('/', (req, res) => {
 
 app.post('/webhook', (req, res) => {
     console.log('==> POST /webhook');
-    res.send({
-        status: 'OK',
-        body: req.body
-    }); //on web
     let body = req.body;
     let events = body.events;
     let source = enents.source;
@@ -31,6 +27,12 @@ app.post('/webhook', (req, res) => {
     console.log(source);
     console.log('==> message');
     console.log(message);
+
+    res.send({
+        status: 'OK',
+        body: req.body
+    }); //on web
+
 });
 
 app.listen(PORT, () => {
