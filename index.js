@@ -21,11 +21,16 @@ app.post('/webhook', (req, res) => {
         status: 'OK',
         body: req.body
     }); //on web
+    let body = req.body;
     let events = body.events[0];
     let source = enents.source;
-    let message = source.events;
+    let message = events.message;
     console.log('==> Body');
-    console.log(req.body);
+    console.log(body);
+    console.log('==> source');
+    console.log(source);
+    console.log('==> message');
+    console.log(message);
 });
 
 app.listen(PORT, () => {
